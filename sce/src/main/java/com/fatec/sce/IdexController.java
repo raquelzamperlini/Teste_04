@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class IdexController {
-  
- 
-    @GetMapping("/")
+   
+    @GetMapping("/congratulacoes")
     public String homePage(Model model) {
        
-        return "index";
+        return "congratulacoes";
     }
 }

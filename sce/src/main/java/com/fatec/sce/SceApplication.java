@@ -7,13 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
 public class SceApplication {
-
+	 //https://github.com/spring-guides/gs-serving-web-content.git
 	public static void main(String[] args) {
 		SpringApplication.run(SceApplication.class, args);
 	}
-	@GetMapping("/")
-    public String homePage(Model model) {
-       
-        return "index";
-    }
+	
 }

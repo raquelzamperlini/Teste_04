@@ -12,7 +12,7 @@ public class FabricaDeConexoes {
 	private String url = "jdbc:mysql://localhost:3306/biblioteca";
 	private String driver = "com.mysql.jdbc.Driver";
 	private String usuario = "root";
-	private String senha = "";
+	private String senha = "alunofatec";
 	Logger logger = Logger.getLogger(FabricaDeConexoes.class);
 
 	public FabricaDeConexoes(ConfiguraDB configura) {
@@ -30,7 +30,7 @@ public class FabricaDeConexoes {
 			Class.forName(driver);
 			return (Connection) DriverManager.getConnection(url, usuario, senha);
 		} catch (CommunicationsException e) {
-			logger.info("Exceção de comunicacao com o DB causa: " + e.getMessage() );
+			logger.info("Exceção de comunicacao com o DB causa: " + e.getMessage());
 			throw new RuntimeException(e);
 		} catch (SQLException e) {
 			logger.info("Exceção geral causa SQLException: " + e.getMessage());
